@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--  icon -->
+    <!-- <link rel="icon" href="./image/icons8-wedding-cake-pulsar-color-96.png" /> -->
+
+    <!--  字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="./_css/bootstrap.css" /> -->
+    <!-- <script src="./_js/bootstrap.bundle.js"></script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>甜點提案</title>
+  </head>
+  <script>
+    //連結到會員登入
+    function openLogin(url) {
+      window.open(url).focus(); //使用"_blank"開新分頁
+    }
+    // 增加購物車的數字
+    function addNumber(event) {
+      event.preventDefault(); // 防止默認的a標籤跳轉行為
+      var numberElements = document.querySelectorAll(".number");
+      numberElements.forEach(function (numberElement) {
+        var currentNumber = parseInt(numberElement.textContent);
+        numberElement.textContent = currentNumber + 1;
+      });
+    }
+  </script>
+  <body>
+    <section class="">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark sticky-top"
+        style="align-items: center; background-color: rgb(230, 230, 200)"
+      >
+        <div class="container justify-content-between">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div style="width: 180px; height: 100%; padding-left: 8px">
+            <a
+              class="navbar-brand"
+              href="#"
+              style="font-size: 2rem; color: #565656"
+              ><img
+                src="./image/icons8-wedding-cake-pulsar-color-96.png"
+                alt=""
+                id="cakeIcon"
+              />
+              &nbsp;甜點提案</a
+            >
+          </div>
+
+          <!-- icon1 -->
+          <div class="nav_icon1" style="height: 100%; width: 120px">
+            <ul
+              class="navbar-nav"
+              style="flex-direction: row; width: 100%; height: 100%"
+            >
+              <li
+                class="dropdown"
+                style="margin-left: 8px; width: 33px; height: 6.1vh"
+              >
+                <a
+                  class="dropdown-toggle no-caret"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  data-bs-offset="0,50"
+                  onclick="openLogin('\logIn.html')"
+                  ><i class="bi bi-person"></i
+                ></a>
+                <!-- 會員連結 -->
+              </li>
+
+              <!-- 購物車1 -->
+              <li class="">
+                <div style="width: 75px; height: 100%">
+                  <a class="car" href=""
+                    ><i class="bi bi-cart-dash ms-2"></i
+                  ></a>
+
+                  <a class="carNumber" href="">
+                    <i class="bi bi-square-fill icon"></i>
+                    <span class="number"><b>0</b></span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- +這下 -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="collapsibleNavbar"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">夏日限定</a>
+                <!--連結老奶奶-->
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >最新活動</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">本月限定</a></li>
+                  <li><a class="dropdown-item" href="#">新品上市</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">精選蛋糕</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >問與答</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">隱私政策</a></li>
+                  <li><a class="dropdown-item" href="#">送貨政策</a></li>
+                  <li><a class="dropdown-item" href="#">退貨政策</a></li>
+                  <li><a class="dropdown-item" href="#">訂購注意事項</a></li>
+                  <li><a class="dropdown-item" href="#">付款方式</a></li>
+                </ul>
+              </li>
+              <li id="itemSearch" class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >商品搜尋</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <form class="d-flex" role="search">
+                      <input
+                        class="form-control me-2 ms-2"
+                        type="search"
+                        placeholder="請輸入要尋找的商品"
+                        aria-label="Search"
+                      />
+                      <button
+                        class="btn btn-outline-secondary me-2"
+                        type="submit"
+                        style="width: 100px"
+                      >
+                        搜尋
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="nav_icon2" style="height: 100%; width: 200px">
+            <ul
+              class="navbar-nav"
+              style="flex-direction: row; width: 100%; height: 100%"
+            >
+              <li class="dropdown" style="width: 100%; height: 100%">
+                <a
+                  style="width: 100%; height: 100%"
+                  class="dropdown-toggle no-caret"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  ><i class="bi bi-person"></i
+                ></a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  style="width: 170px"
+                >
+                  <li class="w-100">
+                    <form class="d-flex flex-wrap w-100" role="search">
+                      <button
+                        id="btn_menber"
+                        class="btn btn-outline-secondary mt-1 w-100 ms-2 me-2"
+                        type="submit"
+                        style="width: 100px"
+                        onclick="openLogin('\logIn.html')"
+                      >
+                        會員登入
+                      </button>
+                      <button
+                        id="btn_reg"
+                        class="btn btn-outline-secondary mt-1 w-100 ms-2 me-2"
+                        type="submit"
+                        style="width: 100px"
+                      >
+                        註冊新會員
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="dropdown"
+                style="width: 100%; height: 100%; padding-left: 5px"
+              >
+                <a
+                  class="dropdown-toggle no-caret"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  style="width: 100%; height: 100%"
+                  ><i class="bi bi-search" style="width: 100%; height: 100%"></i
+                ></a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  style="width: 170px"
+                >
+                  <li class="w-100">
+                    <form class="d-flex flex-wrap w-100" role="search">
+                      <input
+                        class="form-control me-2 ms-2"
+                        type="search"
+                        placeholder="請輸入商品名"
+                        aria-label="Search"
+                      />
+                      <button
+                        class="btn btn-outline-secondary mt-1 w-100 ms-2 me-2"
+                        type="submit"
+                        style="width: 100px"
+                      >
+                        搜尋
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li class="">
+                <!-- 購物車icon -->
+                <div
+                  style="
+                    margin-right: 50px;
+
+                    width: 70px;
+                    height: 100%;
+                  "
+                >
+                  <a class="car" href=""
+                    ><i class="bi bi-cart-dash ms-2"></i
+                  ></a>
+
+                  <a class="carNumber" href="">
+                    <i class="bi bi-square-fill icon"></i>
+                    <span class="number"><b>0</b></span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="swaper-div bg-warning">
+        <!-- //輪播幻燈片 -->
+        <!-- 10. 將第二張圖片改為顯示 ../_image/sunny.jpg，查看畫面效果 -->
+        <div id="carouselExample2" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <!-- overflow: clip" -->
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 560px">
+              <img
+                src="./image/選用甜點/提拉米蘇H2200.JPG"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item" style="height: 560px">
+              <img
+                src="./image/選用甜點/芒果提拉米蘇H2200.JPG "
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item" style="height: 560px">
+              <img
+                src="./image/選用甜點/布朗尼H2200.JPG"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+
+          <!-- 幻燈片的左右按鈕 -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- 首頁標題上的分隔線 -->
+      <div
+        class="container d-flex justify-content-center"
+        style="width: 100px; height: 40px; border-bottom: 1px solid #565656"
+      ></div>
+      <!-- 首頁標題 -->
+      <div
+        class="card_Title d-flex justify-content-center mt-2 mb-5"
+        style="width: 100%; height: 45px"
+      >
+        <p class="fs-2">首頁商品</p>
+      </div>
+      <!-- 購買卡片 -->
+      <div
+        class="d-flex flex-row flex-wrap justify-content-center align-items-center mt-3 mx-auto my-0"
+        id="cardgroup"
+        style="
+          max-width: 1040px;
+
+          padding-left: 0px;
+          padding-right: 0px;
+        "
+      >
+        <!-- card1 -->
+        <div class="card dessertCard">
+          <div>
+            <div class="card_div_of_img">
+              <img
+                src="./image/選用甜點/巧克力塔.jpg"
+                class="card-img-top w-100"
+                alt="..."
+              />
+            </div>
+
+            <div class="card1_body_div_name">
+              <h5 class="card-title">
+                <b>官網限定<br />焦糖巧克力塔</b>
+              </h5>
+
+              <p class="">NT$50</p>
+
+              <a
+                href="#"
+                type="button"
+                class="btn btn-light"
+                onclick="addNumber(event)"
+                >加入購物車</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="card dessertCard">
+          <div class="card_div_of_img">
+            <img
+              src="./image/選用甜點/布朗尼.jpg"
+              class="card-img-top w-100"
+              alt="..."
+            />
+          </div>
+
+          <div class="card1_body_div_name">
+            <h5 class="card-title card1_body_name">
+              <b>官網限定<br />布朗尼真的很好吃我一次可以吃光一盒</b>
+            </h5>
+            <p class="card-text">NT$100</p>
+            <a href="#" class="btn btn-light" onclick="addNumber(event)"
+              >加入購物車</a
+            >
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="card dessertCard">
+          <div class="card_div_of_img">
+            <img
+              src="./image/選用甜點/巴斯克蛋糕.JPG"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+
+          <div class="card1_body_div_name">
+            <h5 class="card-title">
+              <b>精選蛋糕<br />芒果葡萄巴斯克乳酪蛋糕</b>
+            </h5>
+            <p class="card-text">NT$480</p>
+            <a href="#" class="btn btn-light">加入購物車</a>
+          </div>
+        </div>
+        <!-- card4 -->
+        <div class="card card dessertCard">
+          <div class="card_div_of_img">
+            <img
+              src="./image/選用甜點/水蜜桃巴斯克.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+
+          <div class="card1_body_div_name">
+            <h5 class="card-title card1_body_name">
+              <b>精選蛋糕<br />水蜜桃巴斯克</b>
+            </h5>
+            <p class="card-text">NT$480</p>
+            <a href="#" class="btn btn-light">加入購物車</a>
+          </div>
+        </div>
+        <!-- card5 -->
+        <div class="card card dessertCard">
+          <div class="card_div_of_img">
+            <img
+              src="./image/選用甜點/提拉米蘇.JPG"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+
+          <div class="card1_body_div_name">
+            <h5 class="card-title card1_body_name">
+              <b>官網限定<br />招牌提拉米蘇</b>
+            </h5>
+            <p class="card-text">NT$180</p>
+            <a href="#" class="btn btn-light">加入購物車</a>
+          </div>
+        </div>
+        <!-- card6 -->
+        <div class="card card dessertCard">
+          <div class="card_div_of_img">
+            <img
+              src="./image/選用甜點/老奶奶甜甜圈選轉.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+
+          <div class="card1_body_div_name">
+            <h5 class="card-title card1_body_name">
+              <b>獨家販售<br />沒有一個任何老奶奶受到傷害的老奶奶甜甜圈</b>
+            </h5>
+            <p class="card-text">NT$50</p>
+            <a href="#" class="btn btn-light">加入購物車</a>
+          </div>
+        </div>
+      </div>
+      <!-- NEWs標題上的分隔線 -->
+      <div
+        class="container d-flex justify-content-center"
+        style="width: 100px; height: 40px; border-bottom: 1px solid #565656"
+      ></div>
+      <!-- NEWs標題 -->
+      <div
+        class="card_Title d-flex justify-content-center mt-2 mb-5"
+        style="width: 100%; height: 45px"
+      >
+        <p class="fs-2">NEWS</p>
+      </div>
+      <!-- NEWS下面的小填色區塊 -->
+      <div
+        class="d-flex justify-content-center"
+        style="width: 100%; height: 20px; background-color: rgb(240, 240, 225)"
+      ></div>
+      <!--  -->
+      <!-- 2個大購物卡片 -->
+      <!-- card-1 的容器 -->
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="width: 100%; background-color: rgb(240, 240, 225)"
+      >
+        <!-- card-1 -->
+        <div
+          class="card"
+          style="
+            border-radius: 15px;
+            width: 100%;
+            background-color: rgb(240, 240, 225);
+          "
+        >
+          <div class="row g-0 justify-content-center" style="gap: 2.4rem">
+            <div class="col-md-5 card2_div">
+              <!-- card-1照片 -->
+              <img
+                src="./image/選用甜點/草莓巴斯克-方形.JPG"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-5 d-flex card2_Content_div text-center">
+              <div id="card2_content_1" class="card-body card2_content">
+                <h3 class="card-title"><b>本月限定</b></h3>
+                <p class="card-text card2_content_p1">
+                  大家好~又到了吃草莓的季節，也歡迎即將到來的聖誕節
+                  聖誕節是我最喜歡的節日，最適合和朋友，一口甜點配一口熱紅酒
+                  上面的裝飾是蜂蜜奶油中間夾層草莓果醬，合著乳酪蛋糕吃簡直絕配!!是人生的一大享受阿~
+                </p>
+                <p class="card-text card2_content_p2">
+                  <small class="text-body-secondary">限定4吋 NT$280</small>
+                </p>
+                <a href="#" class="btn btn-light">加入購物車</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NEWS下面的小填色區塊(mid中間) -->
+      <div id="block_mid"></div>
+      <!--  -->
+      <!-- card-2 的容器 -->
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="width: 100%; background-color: rgb(240, 240, 225)"
+      >
+        <!-- card-2 -->
+        <div
+          class="card"
+          style="width: 100%; background-color: rgb(240, 240, 225)"
+        >
+          <div
+            class="row g-0 d-flex justify-content-center flex-wrap-reverse"
+            style="
+              gap: 2.4rem;
+              background-color: rgb(240, 240, 225);
+
+              width: 100%;
+            "
+          >
+            <div class="col-md-5 card2_Content_div text-center d-flex pt-5">
+              <div id="card2_content_2" class="card-body card2_content">
+                <h3 class="card-title">
+                  <b>新品上市</b>
+                </h3>
+                <p class="card-text card2_content_p1">
+                  精緻小巧的外表，讓你不經意就忽略它的戰鬥力 But!
+                  當塔皮和內餡在口中相遇的瞬間
+                  外皮金黃酥脆，內餡濃郁香滑。半熟的奶酪塔，每一口都帶來滿滿的幸福感，入口即化的滋味讓人無法抗拒。
+                </p>
+                <p class="card-text card2_content_p2">
+                  <small class="text-body-secondary">一盒四入 NT$200</small>
+                </p>
+                <a href="#" class="btn btn-light">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-5 card2_div">
+              <!-- card-2照片 -->
+              <img
+                src="./image/選用甜點/乳酪塔方形.JPG"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NEWS下面的小填色區塊(card2) -->
+      <div id="block_bottom"></div>
+      <!--  -->
+    </section>
+    <!-- footer -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+      <!-- Section: Links  -->
+      <section class="">
+        <div
+          class="container text-center text-md-start mt-5"
+          style="max-width: 1040px"
+        >
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">About</h6>
+              <p>
+                <a href="#!" class="text-reset">品牌介紹</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">精選原料</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Order</h6>
+              <p>
+                <a href="#!" class="text-reset">訂購注意事項</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">付款方式</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Poliy</h6>
+              <p>
+                <a href="#!" class="text-reset">隱私政策</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">送貨政策</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">退貨政策</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4 ms-5">Contact US</h6>
+              <p><i class="fas fa-home me-3"></i> 台中市公益路二段51號18樓</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                h75825812@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> 0981905018</p>
+              <p><i class="fas fa-print me-3"></i> 04-1234567</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        2024 Cheng,Tsu-An
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>
