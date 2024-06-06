@@ -27,10 +27,6 @@
   width: 80%;
 }
 
-form {
-  width: 100%;
-}
-
 #FormEmail1,
 #FormPassword,
 .btn {
@@ -53,14 +49,14 @@ form {
   width: 50%;
 }
 
-/* @media (min-width: 768px) {
-  form {
+@media (min-width: 768px) {
+  .menberform {
     width: 75%;
   }
-} */
+}
 
 @media (min-width: 992px) {
-  form {
+  .menberform {
     width: 50%;
   }
 }
