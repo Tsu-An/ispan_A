@@ -265,18 +265,30 @@
               <li class="">
                 <!-- 購物車icon -->
                 <div
-                  style="
-                    margin-right: 50px;
-
-                    width: 70px;
-                    height: 100%;
-                  "
+                  style="margin-right: 50px; width: 70px; height: 100%"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                  aria-controls="offcanvasNavbar"
+                  aria-label="Toggle navigation"
                 >
-                  <a class="car" href=""
+                  <a
+                    class="car"
+                    href=""
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
                     ><i class="bi bi-cart-dash ms-2"></i
                   ></a>
 
-                  <a class="carNumber" href="">
+                  <a
+                    class="carNumber"
+                    href=""
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                  >
                     <i class="bi bi-square-fill icon"></i>
                     <span class="number"><b>0</b></span>
                   </a>
@@ -286,6 +298,32 @@
           </div>
         </div>
       </nav>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">購物車2</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="swaper-div bg-warning">
         <!-- //輪播幻燈片 -->
         <!-- 10. 將第二張圖片改為顯示 ../_image/sunny.jpg，查看畫面效果 -->
