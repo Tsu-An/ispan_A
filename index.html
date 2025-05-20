@@ -8,8 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <!--  icon -->
-    <!-- <link rel="icon" href="./image/icons8-wedding-cake-pulsar-color-96.png" /> -->
-
+    <link rel="icon" href="./icons8-wedding-cake-pulsar-color-96.png" />
+    <!--  0520 test 01 -->
     <!--  字體 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,14 +96,27 @@
                 <!-- 會員連結 -->
               </li>
 
-              <!-- 購物車1 -->
+              <!-- 購物車 小畫面 -->
               <li class="">
                 <div style="width: 75px; height: 100%">
-                  <a class="car" href=""
+                  <a
+                    class="car"
+                    href=""
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
                     ><i class="bi bi-cart-dash ms-2"></i
                   ></a>
 
-                  <a class="carNumber" href="">
+                  <a
+                    class="carNumber"
+                    href=""
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                  >
                     <i class="bi bi-square-fill icon"></i>
                     <span class="number"><b>0</b></span>
                   </a>
@@ -213,7 +226,7 @@
                         style="width: 100px"
                         onclick="openLogin('\logIn.html')"
                       >
-                        會員登入
+                        會員登入2
                       </button>
                       <button
                         id="btn_reg"
@@ -263,7 +276,7 @@
                 </ul>
               </li>
               <li class="">
-                <!-- 購物車icon -->
+                <!-- 購物車icon1 大畫面  -->
                 <div
                   style="margin-right: 50px; width: 70px; height: 100%"
                   data-bs-toggle="offcanvas"
@@ -271,6 +284,7 @@
                   aria-controls="offcanvasNavbar"
                   aria-label="Toggle navigation"
                 >
+                  <!-- 上方為購物車側邊欄連結設定   -->
                   <a
                     class="car"
                     href=""
@@ -298,6 +312,7 @@
           </div>
         </div>
       </nav>
+      <!-- 側邊欄畫面 -->
       <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
@@ -305,7 +320,7 @@
         aria-labelledby="offcanvasNavbarLabel"
       >
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">購物車2</h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">購物車</h5>
           <button
             type="button"
             class="btn-close"
